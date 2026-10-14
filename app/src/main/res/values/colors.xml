@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Luxury Dating App Colors -->
+    <color name="rose_primary">#E91E63</color>
+    <color name="rose_dark">#C2185B</color>
+    <color name="rose_light">#F8BBD0</color>
+    <color name="gold_accent">#D4AF37</color>
+    <color name="gold_light">#FFE57F</color>
+
+    <!-- Dark Mode & Surface Colors -->
+    <color name="bg_dark">#121212</color>
+    <color name="surface_dark">#1E1E24</color>
+    <color name="surface_card">#282832</color>
+
+    <!-- Standard Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray_text">#AAAAAA</color>
+    <color name="gold_gift_bg">#FFF3CD</color>
+    <color name="gold_gift_text">#856404</color>
+</resources>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.main.DiscoverFragment">
+
+    <!-- Top Action Header -->
+    <LinearLayout
+        android:id="@+id/discoverHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="👑 SIKRET DATING"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary" />
+
+        <Button
+            android:id="@+id/locationSettingsButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📍 New York (50km)"
+            android:textSize="12sp"
+            app:strokeColor="@color/gold_accent"
+            app:cornerRadius="18dp" />
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/profileCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="12dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/gold_accent"
+        app:layout_constraintBottom_toTopOf="@+id/passButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discoverHeader">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="28dp"
+            android:background="?attr/colorSurface">
+
+            <TextView
+                android:id="@+id/vipBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✨ VERIFIED PROFILE"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/gold_accent"
+                android:letterSpacing="0.1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/avatarImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_profile"
+                app:tint="?attr/colorPrimary"
+                app:layout_constraintBottom_toTopOf="@+id/nameAgeText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vipBadge"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/nameAgeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Sophia, 24"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/locationText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/avatarImage" />
+
+            <TextView
+                android:id="@+id/locationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="📍 2 km away"
+                android:textSize="15sp"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintBottom_toTopOf="@+id/bioText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameAgeText" />
+
+            <TextView
+                android:id="@+id/bioText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:text="Coffee lover, traveler, and photography enthusiast. Looking for someone to explore new cities with!"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/bigHeartPop"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/ic_like"
+        android:visibility="gone"
+        app:tint="#E91E63"
+        app:layout_constraintBottom_toBottomOf="@+id/profileCard"
+        app:layout_constraintEnd_toEndOf="@+id/profileCard"
+        app:layout_constraintStart_toStartOf="@+id/profileCard"
+        app:layout_constraintTop_toTopOf="@+id/profileCard" />
+
+    <TextView
+        android:id="@+id/noMoreProfilesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✨ No more profiles around you right now.\nCheck back later!"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Pass Action Button (X) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/passButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_pass"
+        app:backgroundTint="#2A2A32"
+        app:tint="@android:color/white"
+        app:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/superLikeButton"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Super Like Action Button (Star) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/superLikeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_star"
+        app:backgroundTint="#D4AF37"
+        app:tint="@android:color/black"
+        app:fabCustomSize="52dp"
+        app:elevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/likeButton"
+        app:layout_constraintStart_toEndOf="@+id/passButton" />
+
+    <!-- Like Action Button (Heart) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/likeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_like"
+        app:backgroundTint="#E91E63"
+        app:tint="@android:color/white"
+        app:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/superLikeButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
